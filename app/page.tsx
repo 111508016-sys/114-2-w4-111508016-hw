@@ -1,12 +1,16 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <main className="h-screen overflow-hidden bg-lego-canvas">
       <div className="mx-auto flex h-screen max-w-6xl">
         {/* 左側固定 */}
         <aside className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur">
+        <Image src="/her.jpg" alt="profile" width={100} height={100} />
+        
           <div className="text-xl font-black text-center">曾柔綺</div>
           <div className="mt-1 text-sm text-black/70 text-center">數位內容與科技雙主修</div>
-          <div className="flex justify-center">
+          <div className="flex gap-1.5">
             <div>instagram</div>
             <div>facebook</div>
             <div>github</div>
