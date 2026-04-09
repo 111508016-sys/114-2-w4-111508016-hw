@@ -10,15 +10,15 @@ export default function Home() {
 
           <div className="mt-3 grid grid-cols-2 gap-3"> </div>
           <div className="mt-8 space-y-3">
-            <button className="w-full rounded-xl border-2 border-black/70 bg-blue-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               關於我
             </button>
 
-            <button className="w-full rounded-xl border-2 border-black/70 bg-yellow-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-yellow-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的興趣
             </button>
 
-            <button className="w-full rounded-xl border-2 border-black/70 bg-red-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-red-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的專案
             </button>
           </div>
