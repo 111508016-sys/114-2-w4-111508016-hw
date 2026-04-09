@@ -1,38 +1,41 @@
 import Image from 'next/image';
 
 export default function Home() {
-  return (
-    <main className="h-screen overflow-hidden bg-lego-canvas">
+
+
       <div className="mx-auto flex h-screen max-w-6xl">
         {/* 左側固定 */}
-        <aside className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur flex justify-center items-center overflow-hidden">
+        <div className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur flex justify-center items-center overflow-hidden">
         <Image src="/her.jpg" alt="profile" width={100} height={100} />
-
-          <div className="text-xl font-black text-center">曾柔綺</div>
+        </div>
+        <div className="text-xl font-black text-center">曾柔綺</div>
           <div className="mt-1 text-sm text-black/70 text-center">數位內容與科技雙主修</div>
-          <div className="flex gap-1.5">
-            <div>instagram</div>
-            <div>facebook</div>
-            <div>github</div>
+
+         <div className="flex gap-1">
+            <div>ig</div>
+            <div>fb</div>
+            <div>gh</div>
+
+         
           </div>
 
 
           <div className="mt-3 grid grid-cols-2 gap-3"> </div>
           <div className="mt-8 space-y-3">
-            <button className="w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <div className="w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               關於我
-            </button>
+            </div>
 
-            <button className="w-full rounded-xl border-2 border-black/70 bg-yellow-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <div className="w-full rounded-xl border-2 border-black/70 bg-yellow-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的興趣
-            </button>
+            </div>
 
-            <button className="w-full rounded-xl border-2 border-black/70 bg-red-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+            <div className="w-full rounded-xl border-2 border-black/70 bg-red-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的專案
-            </button>
-          </div>
-        </aside>
+            </div>
 
+          </div>
+        
 
         {/* 右側可滾動 */}
         <section className="h-screen flex-1 overflow-y-auto p-8">
@@ -59,6 +62,6 @@ export default function Home() {
           <div className="h-10" />
         </section>
       </div>
-    </main>
-  );
+   
+  ;
 }
