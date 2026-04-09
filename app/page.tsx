@@ -7,24 +7,18 @@ export default function Home() {
           <div className="text-xl font-black">曾柔綺</div>
           <div className="mt-1 text-sm text-black/70">數位內容與科技雙主修</div>
 
-          
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            <div className="lego-mini-brick bg-red-500" />
-            <div className="lego-mini-brick bg-yellow-400" />
-            <div className="lego-mini-brick bg-blue-500" />
-            <div className="lego-mini-brick bg-green-500" />
-          </div>
 
+          <div className="mt-3 grid grid-cols-2 gap-3"> </div>
           <div className="mt-8 space-y-3">
-            <button className="w-full rounded-xl border-2 border-black bg-blue-500 px-4 py-3 font-black text-white shadow-[0_10px_0_rgba(0,0,0,.18)] active:translate-y-[6px] active:shadow-[0_4px_0_rgba(0,0,0,.18)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-blue-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               關於我
             </button>
 
-            <button className="w-full rounded-xl border-2 border-black bg-yellow-400 px-4 py-3 font-black text-black shadow-[0_10px_0_rgba(0,0,0,.18)] active:translate-y-[6px] active:shadow-[0_4px_0_rgba(0,0,0,.18)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-yellow-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的興趣
             </button>
 
-            <button className="w-full rounded-xl border-2 border-black bg-red-500 px-4 py-3 font-black text-white shadow-[0_10px_0_rgba(0,0,0,.18)] active:translate-y-[6px] active:shadow-[0_4px_0_rgba(0,0,0,.18)]">
+            <button className="w-full rounded-xl border-2 border-black/70 bg-red-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的專案
             </button>
           </div>
