@@ -6,8 +6,9 @@ export default function Home() {
       <div className="mx-auto flex h-screen max-w-6xl">
         {/* 左側固定 */}
         <aside className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur">
-          <div className="text-xl font-black">你的名字</div>
-          <div className="mt-1 text-sm text-black/70">你的簡介 / 標語</div>
+          <div className="text-xl font-black">曾柔綺</div>
+          <div className="mt-1 text-sm text-black/70">政大數位內容與科技雙主修</div>
+          <div className="mt-1 text-sm text-black/70"> </div>
 
           <div className="mt-6 text-sm font-extrabold">LEGO 區塊</div>
           <div className="mt-3 grid grid-cols-2 gap-3">
