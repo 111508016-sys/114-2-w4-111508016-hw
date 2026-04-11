@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,10 +20,9 @@ export default function Home() {
           </div>
 
           <div className="mt-8 space-y-3">
-            
-            <Link href="about"><div className="w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
-              關於我</div>
-              </Link>
+            <div className="w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
+              關於我
+            </div>
 
             <div className="w-full rounded-xl border-2 border-black/70 bg-yellow-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]">
               我的興趣
