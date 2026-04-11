@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Image from "next/image";
 import Link from "next/link";
 import { PiAddressBookLight } from "react-icons/pi";
+import AsciiTextClient from "../components/AsciiTextClient";
+import { SideLegoNav } from "../components/SideLegoNav";
+import { HomePhotoTrail } from "../components/HomePhotoTrail";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,76 +39,73 @@ export default function RootLayout({
         <div className="h-screen overflow-hidden bg-lego-canvas">
           <div className="mx-auto flex h-screen max-w-6xl">
             {/* 左側固定骨架 */}
-            <div className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur">
+            <aside className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur">
               <div className="flex justify-center">
                 <Image
                   src="/her.jpg"
                   alt="profile"
-                  width={120}
-                  height={120}
-                  className="rounded-full border-2 border-black/20"
+                  width={128}
+                  height={128}
+                  priority
+                  className="h-32 w-32 rounded-full border-[2px] border-gray object-cover"
                 />
               </div>
 
-              <div className="mt-4 text-xl font-black text-center">曾柔綺</div>
-              <div className="mt-1 text-sm text-black/70 text-center">
+              <div className="mt-4 flex justify-center">
+                <div className="relative h-14 w-full overflow-hidden bg-transparent">
+                  {/* 背景特效 */}
+                  <AsciiTextClient text="曾柔綺" className="h-full w-full opacity-60" />
+
+                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                    <div className="text-2xl font-black text-black drop-shadow-[0_2px_0_rgba(255,255,255,.9)]">
+                      曾柔綺
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-2 text-sm text-center text-black/70">
                 數位內容與科技雙主修
               </div>
-              <div className="text-center"><PiAddressBookLight /></div>
+
+              <div className="mt-3 flex justify-center">
+                <PiAddressBookLight className="text-2xl text-black/70" />
+              </div>
 
               <div className="mt-4 flex justify-center gap-3 text-sm font-black text-black/70">
-                <Link
-                  href="https://instagram.com/"
-                  target="_blank"
-                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
-                >
-                  IG
-                </Link>
-                <Link
-                  href="https://facebook.com/"
-                  target="_blank"
-                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
-                >
-                  FB
-                </Link>
-                <Link
-                  href="https://github.com/"
-                  target="_blank"
-                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
-                >
-                  GH
-                </Link>
-              </div>
+  <Link
+    href="https://instagram.com/"
+    target="_blank"
+    className="rounded-full border border-black/15 bg-white/60 px-3 py-1 transition-[filter,transform,background-color] hover:bg-white hover:brightness-125 active:brightness-150 active:translate-y-[1px]"
+  >
+    IG
+  </Link>
+  <Link
+    href="https://facebook.com/"
+    target="_blank"
+    className="rounded-full border border-black/15 bg-white/60 px-3 py-1 transition-[filter,transform,background-color] hover:bg-white hover:brightness-125 active:brightness-150 active:translate-y-[1px]"
+  >
+    FB
+  </Link>
+  <Link
+    href="https://github.com/"
+    target="_blank"
+    className="rounded-full border border-black/15 bg-white/60 px-3 py-1 transition-[filter,transform,background-color] hover:bg-white hover:brightness-125 active:brightness-150 active:translate-y-[1px]"
+  >
+    GH
+  </Link>
+</div>
 
-              <div className="mt-8 space-y-3">
-                <Link
-                  href="/about"
-                  className="block w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
-                >
-                  關於我
-                </Link>
-
-                <Link
-                  href="/hobby"
-                  className="block w-full rounded-xl border-2 border-black/70 bg-yellow-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
-                >
-                  我的興趣
-                </Link>
-
-                <Link
-                  href="/project"
-                  className="block w-full rounded-xl border-2 border-black/70 bg-red-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
-                >
-                  我的專案
-                </Link>
-              </div>
-            </div>
+              {/* 這裡改成拼積木導覽（點了才分開） */}
+              <SideLegoNav />
+            </aside>
 
             {/* 右側：所有頁面的內容都從 children 進來 */}
-            <div className="h-screen flex-1 overflow-y-auto p-8">
-              {children}
-              <div className="h-10" />
-            </div>
+            <main className="relative h-screen flex-1 overflow-y-auto p-8">
+  <HomePhotoTrail />
+  {children}
+  <div className="h-10" />
+</main>
           </div>
         </div>
       </body>

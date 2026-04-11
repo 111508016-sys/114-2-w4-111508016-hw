@@ -1,9 +1,10 @@
-import Image from "next/image";
+import GarageGrid from "@/components/GarageGrid";
 
-export default function hobby() {
+export default function Home() {
   return (
     <div>
-      hobby 我的興趣
-      </div>
+      <div className="text-2xl font-black">hobby 我的興趣</div>
+      <GarageGrid />
+    </div>
   );
 }
