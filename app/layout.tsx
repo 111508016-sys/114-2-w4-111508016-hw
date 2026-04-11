@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link";
+import { PiAddressBookLight } from "react-icons/pi";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,83 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full">
+        <div className="h-screen overflow-hidden bg-lego-canvas">
+          <div className="mx-auto flex h-screen max-w-6xl">
+            {/* 左側固定骨架 */}
+            <div className="sticky top-0 h-screen w-[320px] overflow-y-auto border-r border-black/10 bg-white/70 p-6 backdrop-blur">
+              <div className="flex justify-center">
+                <Image
+                  src="/her.jpg"
+                  alt="profile"
+                  width={120}
+                  height={120}
+                  className="rounded-full border-2 border-black/20"
+                />
+              </div>
+
+              <div className="mt-4 text-xl font-black text-center">曾柔綺</div>
+              <div className="mt-1 text-sm text-black/70 text-center">
+                數位內容與科技雙主修
+              </div>
+              <div className="text-center"><PiAddressBookLight /></div>
+
+              <div className="mt-4 flex justify-center gap-3 text-sm font-black text-black/70">
+                <Link
+                  href="https://instagram.com/"
+                  target="_blank"
+                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
+                >
+                  IG
+                </Link>
+                <Link
+                  href="https://facebook.com/"
+                  target="_blank"
+                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
+                >
+                  FB
+                </Link>
+                <Link
+                  href="https://github.com/"
+                  target="_blank"
+                  className="rounded-full border border-black/15 bg-white/60 px-3 py-1 hover:bg-white"
+                >
+                  GH
+                </Link>
+              </div>
+
+              <div className="mt-8 space-y-3">
+                <Link
+                  href="/about"
+                  className="block w-full rounded-xl border-2 border-black/70 bg-blue-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
+                >
+                  關於我
+                </Link>
+
+                <Link
+                  href="/hobby"
+                  className="block w-full rounded-xl border-2 border-black/70 bg-yellow-200 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
+                >
+                  我的興趣
+                </Link>
+
+                <Link
+                  href="/project"
+                  className="block w-full rounded-xl border-2 border-black/70 bg-red-400 px-4 py-3 font-black text-black/80 shadow-[0_8px_0_rgba(0,0,0,.10)] active:translate-y-[4px] active:shadow-[0_3px_0_rgba(0,0,0,.10)]"
+                >
+                  我的專案
+                </Link>
+              </div>
+            </div>
+
+            {/* 右側：所有頁面的內容都從 children 進來 */}
+            <div className="h-screen flex-1 overflow-y-auto p-8">
+              {children}
+              <div className="h-10" />
+            </div>
+          </div>
+        </div>
+      </body>
     </html>
   );
 }

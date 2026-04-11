@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-export default function about() {
+export default function project() {
   return (
     <div>
-      about 關於我
+      project 我的專案
       </div>
   );
 }
