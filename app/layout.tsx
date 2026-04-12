@@ -57,10 +57,7 @@ export default function RootLayout({
 
               <div className="mt-4 flex justify-center">
                 <div className="relative h-14 w-full overflow-hidden bg-transparent">
-                  <AsciiTextClient
-                    text="曾柔綺"
-                    className="h-full w-full opacity-60"
-                  />
+                <AsciiTextClient text="曾柔綺" className="h-full w-full opacity-60" />
 
                   <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                     <div className="text-2xl font-black text-black drop-shadow-[0_2px_0_rgba(255,255,255,.9)]">
