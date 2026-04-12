@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import ImageTrail from "./ImageTrail.jsx";
+import ImageTrail from "./ImageTrail";
 
 const TRAIL_IMAGES = [
   "/IMG_1924.JPG",

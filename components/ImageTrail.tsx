@@ -4,11 +4,15 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./ImageTrail.css";
 
-export default function ImageTrail({ items = [] }) {
-  const containerRef = useRef(null);
-  const idxRef = useRef(0);
-  const lastRef = useRef({ x: 0, y: 0 });
-  const itemsRef = useRef(items);
+type ImageTrailProps = {
+  items?: string[];
+};
+
+export default function ImageTrail({ items = [] }: ImageTrailProps) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const idxRef = useRef<number>(0);
+  const lastRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
+  const itemsRef = useRef<string[]>(items);
 
   // 讓 items 更新時不重綁事件
   useEffect(() => {
@@ -19,10 +23,9 @@ export default function ImageTrail({ items = [] }) {
     const el = containerRef.current;
     if (!el) return;
 
-    
     const threshold = 80;
 
-    const onMove = (e) => {
+    const onMove = (e: MouseEvent) => {
       const x = e.clientX;
       const y = e.clientY;
 
@@ -33,7 +36,7 @@ export default function ImageTrail({ items = [] }) {
       if (dist < threshold) return;
       lastRef.current = { x, y };
 
-      const imgs = el.querySelectorAll(".content__img");
+      const imgs = el.querySelectorAll<HTMLElement>(".content__img");
       if (!imgs.length) return;
 
       idxRef.current = (idxRef.current + 1) % imgs.length;
@@ -46,7 +49,7 @@ export default function ImageTrail({ items = [] }) {
         scale: 1,
         zIndex: Date.now(),
       });
-      
+
       gsap.to(node, {
         opacity: 0,
         scale: 0.2,
@@ -67,7 +70,10 @@ export default function ImageTrail({ items = [] }) {
     <div className="content" ref={containerRef}>
       {items.map((url, i) => (
         <div className="content__img" key={i}>
-          <div className="content__img-inner" style={{ backgroundImage: `url(${url})` }} />
+          <div
+            className="content__img-inner"
+            style={{ backgroundImage: `url(${url})` }}
+          />
         </div>
       ))}
     </div>
