@@ -1,4 +1,4 @@
-import ASCIIText from "@react-bits/ASCIIText-JS-CSS";
+
 import { HomePhotoTrail } from "../components/HomePhotoTrail";
 
 export default function Home() {
