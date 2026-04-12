@@ -39,15 +39,13 @@ export default function ImageTrail({ items = [] }) {
       idxRef.current = (idxRef.current + 1) % imgs.length;
       const node = imgs[idxRef.current];
 
-      gsap.killTweensOf(node);
       gsap.set(node, {
         opacity: 1,
-        x: x - 90,
-        y: y - 120,
+        x: x - 160,
+        y: y - 220,
         scale: 1,
         zIndex: Date.now(),
       });
-
       
       gsap.to(node, {
         opacity: 0,

@@ -8,6 +8,8 @@ const TRAIL_IMAGES = [
   "/IMG_4254.JPG",
   "/IMG_7028.JPG",
   "/IMG_8292.JPG",
+  "/IMG_6237.JPG",
+  "/IMG_6478.JPG",
   "/2.jpg",
 ];
 

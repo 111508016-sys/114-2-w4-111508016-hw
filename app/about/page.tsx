@@ -1,23 +1,15 @@
-import { HomePhotoTrail } from "@/components/HomePhotoTrail";
+"use client";
 
-export default function Home() {
+import TargetCursor from "@/components/TargetCursor";
+import AboutCard from "@/components/AboutCard";
+
+export default function AboutPage() {
   return (
-    <>
-      {/* 其他區塊... */}
-
-      <section id="about" className="relative overflow-hidden py-24">
-        {/* 這行就是把 trail 限制在 about 區塊 */}
-        <HomePhotoTrail />
-
-        <div className="relative z-20 mx-auto max-w-3xl px-6">
-          <h2 className="text-3xl font-black">關於我</h2>
-          <p className="mt-4 text-lg text-zinc-700">
-            ...
-          </p>
-        </div>
-      </section>
-
-      {/* 其他區塊... */}
-    </>
+    <main className="relative p-8">
+      <TargetCursor />
+      <div className="mt-6 cursor-target pointer-events-auto">
+  <AboutCard />
+</div>
+    </main>
   );
 }

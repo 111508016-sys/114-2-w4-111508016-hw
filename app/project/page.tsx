@@ -1,9 +1,11 @@
-import Image from "next/image";
+"use client";
+import ProjectsSection from "@/components/project";
+import MagicBento from "@/components/MagicBento";
 
-export default function project() {
+export default function ProjectPage() {
   return (
-    <div>
-      project 我的專案
-      </div>
+    
+      <ProjectsSection />
+   
   );
 }

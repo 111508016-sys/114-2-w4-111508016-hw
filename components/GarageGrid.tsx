@@ -3,18 +3,18 @@
 type Project = { title: string; cover: string };
 
 const PROJECTS: Project[] = [
-  { title: "作品 1", cover: "/IMG_1924.JPG" },
-  { title: "作品 2", cover: "/IMG_4254.JPG" },
-  { title: "作品 3", cover: "/IMG_7028.JPG" },
-  { title: "作品 4", cover: "/IMG_8292.JPG" },
-  { title: "作品 5", cover: "/her.jpg" },
-  { title: "作品 6", cover: "/2.jpg" },
+  { title: "land rover defender", cover: "/land.jpg" },
+  { title: "ford bronco", cover: "/f.png" },
+  { title: "Back to Future", cover: "/btf.JPG" },
+  { title: "Williams Racing FW46", cover: "/w.JPG" },
+  { title: "Chevrolet Camaro ZL1", cover: "/c.jpg" },
+  
 ];
 
 export default function GarageGrid() {
   return (
     <section className="mt-8">
-      <h2 className="text-2xl font-black">車庫作品集</h2>
+      <h2 className="text-2xl font-black">我的樂高車庫</h2>
 
       <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((p, i) => (
