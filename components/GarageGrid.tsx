@@ -5,8 +5,8 @@ type Project = { title: string; cover: string };
 const PROJECTS: Project[] = [
   { title: "land rover defender", cover: "/land.jpg" },
   { title: "ford bronco", cover: "/f.png" },
-  { title: "Back to Future", cover: "/btf.JPG" },
-  { title: "Williams Racing FW46", cover: "/w.JPG" },
+  { title: "Back to Future", cover: "/btf.jpg" },
+  { title: "Williams Racing FW46", cover: "/w.jpg" },
   { title: "Chevrolet Camaro ZL1", cover: "/c.jpg" },
   
 ];
